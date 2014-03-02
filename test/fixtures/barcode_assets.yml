@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  barcodenum: MyString
+  asset_id: 1
+  updatedon: 2014-02-28
+  assigned_by_custodian: 1
+
+two:
+  barcodenum: MyString
+  asset_id: 1
+  updatedon: 2014-02-28
+  assigned_by_custodian: 1

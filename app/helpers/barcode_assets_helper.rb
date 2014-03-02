@@ -1,0 +1,2 @@
+module BarcodeAssetsHelper
+end

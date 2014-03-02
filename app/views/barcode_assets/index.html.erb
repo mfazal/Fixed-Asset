@@ -1,0 +1,35 @@
+<div class="page-header">
+  <%= link_to new_barcode_asset_path, :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Barcode asset
+  <% end %>
+  <h1>Listing barcode_assets</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Barcodenum</th>
+            <th>Asset</th>
+            <th>Updatedon</th>
+            <th>Assigned by custodian</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @barcode_assets) do |barcode_asset| %>
+            <td><%= barcode_asset.barcodenum %></td>
+            <td><%= barcode_asset.asset_id %></td>
+            <td><%= barcode_asset.updatedon %></td>
+            <td><%= barcode_asset.assigned_by_custodian %></td>
+            <td><%= link_to 'Show', barcode_asset %></td>
+        <td><%= link_to 'Edit', edit_barcode_asset_path(barcode_asset) %></td>
+        <td><%= link_to 'Destroy', barcode_asset, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>

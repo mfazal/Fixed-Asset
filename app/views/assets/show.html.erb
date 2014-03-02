@@ -1,0 +1,41 @@
+<div class="page-header">
+  <%= link_to assets_path, :class => 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_asset_path(@asset), :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show asset</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Category:</dt>
+  <dd><%= @asset.category_id %></dd>
+
+  <dt>Brand:</dt>
+  <dd><%= @asset.brand_id %></dd>
+
+  <dt>Model:</dt>
+  <dd><%= @asset.model %></dd>
+
+  <dt>Serialnum:</dt>
+  <dd><%= @asset.serialnum %></dd>
+
+  <dt>Description:</dt>
+  <dd><%= @asset.description %></dd>
+
+  <dt>Purchase date:</dt>
+  <dd><%= @asset.purchase_date %></dd>
+
+  <dt>Qty:</dt>
+  <dd><%= @asset.qty %></dd>
+
+  <dt>Custodian:</dt>
+  <dd><%= @asset.custodian_id %></dd>
+
+  <dt>Employee:</dt>
+  <dd><%= @asset.employee_id %></dd>
+
+</dl>

@@ -1,0 +1,26 @@
+<div class="page-header">
+  <%= link_to barcode_assets_path, :class => 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_barcode_asset_path(@barcode_asset), :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show barcode_asset</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Barcodenum:</dt>
+  <dd><%= @barcode_asset.barcodenum %></dd>
+
+  <dt>Asset:</dt>
+  <dd><%= @barcode_asset.asset_id %></dd>
+
+  <dt>Updatedon:</dt>
+  <dd><%= @barcode_asset.updatedon %></dd>
+
+  <dt>Assigned by custodian:</dt>
+  <dd><%= @barcode_asset.assigned_by_custodian %></dd>
+
+</dl>

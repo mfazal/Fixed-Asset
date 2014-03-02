@@ -1,0 +1,31 @@
+<div class="page-header">
+  <%= link_to new_custodian_path, :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Custodian
+  <% end %>
+  <h1>Listing custodians</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Employee</th>
+            <th>Description</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @custodians) do |custodian| %>
+            <td><%= custodian.employee_id %></td>
+            <td><%= custodian.description %></td>
+            <td><%= link_to 'Show', custodian %></td>
+        <td><%= link_to 'Edit', edit_custodian_path(custodian) %></td>
+        <td><%= link_to 'Destroy', custodian, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>
